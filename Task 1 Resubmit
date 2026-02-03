@@ -1,0 +1,58 @@
+root@ip-172-31-7-215:/home/ubuntu#
+root@ip-172-31-7-215:/home/ubuntu# mkdir my_folder
+root@ip-172-31-7-215:/home/ubuntu# cd my_folder
+root@ip-172-31-7-215:/home/ubuntu/my_folder# echo "This is the content of my_file.txt." > my_file.txt~
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls
+my_file.txt~
+root@ip-172-31-7-215:/home/ubuntu/my_folder# echo "This text comes from another_file.txt." > another_file.txt
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls
+another_file.txt  my_file.txt~
+root@ip-172-31-7-215:/home/ubuntu/my_folder# cd my_file.txt
+bash: cd: my_file.txt: No such file or directory
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls
+another_file.txt  my_file.txt~
+root@ip-172-31-7-215:/home/ubuntu/my_folder# cat another_file.txt >> my_file.txt
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls
+another_file.txt  my_file.txt  my_file.txt~
+root@ip-172-31-7-215:/home/ubuntu/my_folder# cat another_file.txt
+This text comes from another_file.txt.
+root@ip-172-31-7-215:/home/ubuntu/my_folder# cat my_file.txt
+This text comes from another_file.txt.
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ^M
+
+
+
+2
+
+root@ip-172-31-7-215:/home/ubuntu/my_folder# touch file{1..20}.txt
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls
+another_file.txt  file10.txt  file12.txt  file14.txt  file16.txt  file18.txt  file2.txt   file3.txt  file5.txt  file7.txt  file9.txt    my_file.txt~
+file1.txt         file11.txt  file13.txt  file15.txt  file17.txt  file19.txt  file20.txt  file4.txt  file6.txt  file8.txt  my_file.txt
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder# for i in {1..5}; do
+  mv file$i.txt file$i.yml
+done
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls
+another_file.txt  file10.txt  file12.txt  file14.txt  file16.txt  file18.txt  file2.yml   file3.yml  file5.yml  file7.txt  file9.txt    my_file.txt~
+file1.yml         file11.txt  file13.txt  file15.txt  file17.txt  file19.txt  file20.txt  file4.yml  file6.txt  file8.txt  my_file.txt
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls -lt | head -n 6
+total 12
+-rw-r--r-- 1 root root  0 Feb  3 08:40 file1.yml
+-rw-r--r-- 1 root root  0 Feb  3 08:40 file10.txt
+-rw-r--r-- 1 root root  0 Feb  3 08:40 file11.txt
+-rw-r--r-- 1 root root  0 Feb  3 08:40 file12.txt
+-rw-r--r-- 1 root root  0 Feb  3 08:40 file13.txt
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder#
+root@ip-172-31-7-215:/home/ubuntu/my_folder# ls -t | head -n 5
+file1.yml
+file10.txt
+file11.txt
+file12.txt
+file13.txt
+
+
