@@ -1,0 +1,41 @@
+Tamil@DESKTOP-73L0DG2 MINGW64 ~/downloads
+$ ssh -i My-demo-key-pair-3-2-26.pem ec2-user@13.233.47.194
+ssh: connect to host 13.233.47.194 port 22: Connection timed out
+
+Tamil@DESKTOP-73L0DG2 MINGW64 ~/downloads
+$ ^C
+
+Tamil@DESKTOP-73L0DG2 MINGW64 ~/downloads
+$ ssh -i My-demo-key-pair-3-2-26.pem ec2-user@13.233.47.194
+ssh: connect to host 13.233.47.194 port 22: Connection timed out
+
+Tamil@DESKTOP-73L0DG2 MINGW64 ~/downloads
+$ ssh -i My-demo-key-pair-3-2-26.pem ec2-user@13.233.47.194
+The authenticity of host '13.233.47.194 (13.233.47.194)' can't be established.
+ED25519 key fingerprint is: SHA256:pNEd0AigLYys6z6j00oUHd4cvgOSHIBOwQEKGCVgP1s
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '13.233.47.194' (ED25519) to the list of known hosts.
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-10-0-1-184 ~]$ ping google.com
+PING google.com (216.58.203.14) 56(84) bytes of data.
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=1 ttl=114 time=1.70 ms
+64 bytes from bom12s04-in-f14.1e100.net (216.58.203.14): icmp_seq=2 ttl=114 time=1.72 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=3 ttl=114 time=1.69 ms
+64 bytes from bom12s04-in-f14.1e100.net (216.58.203.14): icmp_seq=4 ttl=114 time=1.78 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=5 ttl=114 time=1.79 ms
+64 bytes from bom12s04-in-f14.1e100.net (216.58.203.14): icmp_seq=6 ttl=114 time=1.80 ms
+64 bytes from hkg12s09-in-f14.1e100.net (216.58.203.14): icmp_seq=7 ttl=114 time=1.75 ms
+64 bytes from bom12s04-in-f14.1e100.net (216.58.203.14): icmp_seq=8 ttl=114 time=1.73 ms
